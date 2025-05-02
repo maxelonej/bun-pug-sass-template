@@ -1,0 +1,17 @@
+{
+  "name": "bun-pug-sass-template",
+  "module": "index.html",
+  "dependencies": {
+    "pug": "^3.0.3",
+    "sass": "^1.87.0"
+  },
+  "scripts": {
+    "dev": "bun run scripts/watcher.js",
+    "build": "NODE_ENV=production bun run scripts/watcher.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "type": "module"
+}
