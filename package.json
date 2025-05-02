@@ -6,8 +6,8 @@
     "sass": "^1.87.0"
   },
   "scripts": {
-    "dev": "bun run scripts/watcher.js",
-    "build": "NODE_ENV=production bun run scripts/watcher.js"
+    "dev": "bun run scripts/dev.js",
+    "build": "NODE_ENV=production bun run scripts/build.js"
   },
   "devDependencies": {
     "@types/bun": "latest"
