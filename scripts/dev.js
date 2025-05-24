@@ -4,8 +4,8 @@ import pug from "pug";
 import * as sass from "sass";
 import { spawn } from "bun";
 
-const pugDir = path.resolve("src/pug");
-const sassDir = path.resolve("src/sass");
+const pugDir = path.resolve("src/views");
+const sassDir = path.resolve("src/styles");
 const distDir = path.resolve("dist");
 const distHtml = path.join(distDir, "index.html");
 const distCss = path.join(distDir, "styles.css");
@@ -29,7 +29,7 @@ function buildPug() {
 function buildSass() {
   try {
     const isProd = process.env.NODE_ENV === "production";
-    const result = sass.compile(path.join(sassDir, "styles.sass"), {
+    const result = sass.compile(path.join(sassDir, "index.sass"), {
       style: isProd ? "compressed" : "expanded",
       loadPaths: [sassDir],
     });
